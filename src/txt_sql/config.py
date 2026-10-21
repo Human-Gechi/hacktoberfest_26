@@ -2,8 +2,6 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    ollama_base_url: str = "http://localhost:11434"
-    ollama_model: str = "gpt-oss:20b"
     openrouter_api_key: str = ""
     openrouter_model: str = "meta-llama/llama-3.2-3b-instruct:free"
     openrouter_base_url: str = "https://openrouter.ai/api/v1"
