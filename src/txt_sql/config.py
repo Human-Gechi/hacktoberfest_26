@@ -2,9 +2,8 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    openrouter_api_key: str = ""
-    openrouter_model: str = "meta-llama/llama-3.2-3b-instruct:free"
-    openrouter_base_url: str = "https://openrouter.ai/api/v1"
+    ollama_base_url: str = "http://localhost:11434"
+    ollama_model: str = "qwen2.5-coder:3b"
     llm_temperature: float = 0.0
     database_url: str = "sqlite:///./examples/sample.db"
     sql_read_only: bool = True
@@ -13,9 +12,7 @@ class Settings(BaseSettings):
     sql_max_rows_returned: int = 100
 
     model_config = SettingsConfigDict(
-        env_file=".env",
-        env_file_encoding="utf-8",
-        extra="ignore",
+        env_file=".env", env_file_encoding="utf-8", extra="ignore"
     )
 
 
