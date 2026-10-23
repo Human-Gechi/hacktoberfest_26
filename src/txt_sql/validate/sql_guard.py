@@ -3,6 +3,8 @@ import re
 import sqlglot
 from sqlglot import exp, parse_one
 
+from src.txt_sql.config import settings
+
 
 def clean_sql(response: str) -> str:
     response = re.sub(r"<think>.*?</think>", "", response, flags=re.DOTALL)
@@ -10,7 +12,12 @@ def clean_sql(response: str) -> str:
     return response.strip().rstrip(";")
 
 
-def validate(sql, allowed_tables, dialect="sqlite", max_rows=200):
+def validate(
+    sql,
+    allowed_tables,
+    dialect=settings.dialect,
+    max_rows=settings.sql_max_rows_returned,
+):
     try:
         parsed = parse_one(sql, read=dialect)
     except sqlglot.errors.ParseError as e:
