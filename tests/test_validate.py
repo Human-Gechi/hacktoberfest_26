@@ -1,6 +1,6 @@
 import pytest
 
-from src.txt_sql.validate.sql_guard import validate
+from txt_sql.validate.sql_guard import validate
 
 tables = {"Customers"}
 
