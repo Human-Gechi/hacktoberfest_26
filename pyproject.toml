@@ -1,0 +1,28 @@
+[project]
+name = "ask-sqlite"
+version = "0.1.0"
+description = "Ask questions about your SQLite database in plain English and get answers as SQL and formatted tables."
+authors = [{name = "Human-Gechi", email = "okoliogechi74@gmail.com"}]
+license = {text = "MIT"}
+requires-python = ">=3.10"
+readme = "README.md"
+dependencies = [
+    "pydantic>=2.7.0",
+    "pydantic-settings>=2.2.0",
+    "ollama>=0.2.1",
+    "sqlglot>=25.0.0",
+    "typer>=0.12.3",
+    "rich>=13.7.1"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.2.0",
+    "ruff"
+]
+
+[project.entry-points."console_scripts"]
+ask-sqlite = "txt_sql.cli:app"
+
+[tool.setuptools]
+packages = ["txt_sql"]

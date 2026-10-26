@@ -38,7 +38,7 @@ def render_result(result: dict) -> None:
 
 @app.command()
 def main():
-    typer.secho("Welcome to Text-to-SQL CLI", fg=typer.colors.GREEN)
+    typer.secho("Welcome to ask-sqlite CLI", fg=typer.colors.GREEN)
     typer.secho(
         "Ask any SQL-related question and get instant answers!",
         fg=typer.colors.BRIGHT_BLUE,
@@ -68,7 +68,7 @@ def main():
             break
         except Exception as e:
             typer.secho(f"Error: {e}", fg="red")
-            break
+            
 
 
 if __name__ == "__main__":
