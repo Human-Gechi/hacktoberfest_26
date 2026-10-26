@@ -1,2 +1,0 @@
-{"question": "How many customers are there?", "sql": "SELECT COUNT(*) FROM Customer"}
-{"question": "Total sales per country", "sql": "SELECT BillingCountry, SUM(Total) AS total_sales FROM Invoice GROUP BY BillingCountry ORDER BY total_sales DESC LIMIT 20"}
