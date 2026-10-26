@@ -26,3 +26,6 @@ ask-sqlite = "txt_sql.cli:app"
 
 [tool.setuptools]
 packages = ["txt_sql"]
+
+[tool.ruff.lint]
+ignore = ["BLE001"]

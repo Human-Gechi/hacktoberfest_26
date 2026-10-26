@@ -68,7 +68,6 @@ def main():
             break
         except Exception as e:
             typer.secho(f"Error: {e}", fg="red")
-            
 
 
 if __name__ == "__main__":
