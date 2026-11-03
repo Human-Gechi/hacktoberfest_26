@@ -2,7 +2,6 @@
 
 > Ask questions about your SQLite database in plain English and get answers as validated SQL and formatted tables.
 
-[![CI](https://github.com/Human-Gechi/txt_sql/actions/workflows/ci.yml/badge.svg)](https://github.com/Human-Gechi/txt_sql/actions/workflows/ci.yml)
 [![Python Version](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Code style: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
@@ -39,7 +38,7 @@ Unlike standard text-to-SQL tools that blindly execute LLM output, **ask-sqlite*
 ```text
 ┌─────────────────────────────────────────────────────────────────────┐
 │                        Natural Language Query                       │                                  
-│                                  │
+│                                                                     |
 └──────────────────────────────────┬──────────────────────────────────┘
                                    │
                                    ▼
@@ -220,6 +219,7 @@ When you connect your own database, you **do not** need to provide schemas, migr
 ---
 
 ## CLI Usage Example
+<img width="933" height="452" alt="image" src="https://github.com/user-attachments/assets/be80f88b-8039-46ad-a3f1-d17026f60310" />
 
 Type `exit`, `quit`, or `q` (or press `Ctrl+C`) to exit.
 
